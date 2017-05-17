@@ -44,14 +44,9 @@ class PostsNew extends Component {
                     component={ this.renderField }
                 />
                 <Field
-                    label='Categories'
-                    name='categories'
-                    component={ this.renderField}
-                />
-                <Field
-                    label='Content'
-                    name='content'
-                    component={ this.renderField}
+                    label='Body'
+                    name='body'
+                    component={ this.renderField }
                 />
                 <button type='submit' className='btn btn-primary'>Submit</button>
                 <Link to='/' className='btn btn-danger'>Cancel</Link>
@@ -67,12 +62,8 @@ function validate(values) {
         errors.title = 'Enter a title !';
     }
 
-    if(!values.categories) {
-        errors.categories = 'Enter some categories !';
-    }
-
-    if(!values.content) {
-        errors.content = 'Enter some content !';
+    if(!values.body) {
+        errors.body = 'Enter some content !';
     }
 
     return errors;
